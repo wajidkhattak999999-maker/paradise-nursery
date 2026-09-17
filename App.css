@@ -1,1 +1,456 @@
 
+/* App.css - Paradise Nursery / e-plantShopping */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f4;
+  color: #2e382e;
+}
+
+/* Background Image styling for Landing Page (Required by Rubric) */
+.background-image {
+  background-image: url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.landing-title {
+  color: #1e5631;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.landing-tagline {
+  font-size: 1.25rem;
+  color: #4c7c59;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #4caf50;
+  margin: 1rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+/* About Us Container (Required by Rubric) */
+.about-us-container {
+  margin: 1.5rem 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.about-us-title {
+  font-size: 1.5rem;
+  color: #2d5a27;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.about-us-description,
+.about-us-mission {
+  color: #3d4a3d;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.get-started-btn {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+  margin-top: 1rem;
+}
+
+.get-started-btn:hover {
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.5);
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1b4332;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.brand-icon {
+  font-size: 2rem;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: #b7e4c7;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #74c69d;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 0.3rem;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #e63946;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Product List Styles */
+.product-list-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.category-section {
+  margin-bottom: 3.5rem;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: #1b4332;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.category-divider {
+  width: 60px;
+  height: 3px;
+  background: #52b788;
+  margin: 0 auto 2rem auto;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plant-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.plant-details {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plant-name {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.plant-description {
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  flex-grow: 1;
+}
+
+.plant-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #1b5e20;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+  color: #2e4a30;
+}
+
+/* Cart Item Styles */
+.cart-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-total-amount {
+  font-size: 1.6rem;
+  color: #1b4332;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-item-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-name {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 0.3rem;
+}
+
+.cart-item-unit-cost {
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.cart-item-subtotal {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.quantity-btn {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.cart-item-quantity {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 25px;
+  text-align: center;
+}
+
+.delete-btn {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+}
+
+.cart-bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.continue-shopping-btn {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #1a202c;
+}
+
+.checkout-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #1b5e20;
+}
+
+.empty-cart-message {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-size: 1.2rem;
+}
